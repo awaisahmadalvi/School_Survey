@@ -1,0 +1,24 @@
+<a href="#/schools">Go Back</a>
+<div class="panel panel-default" ng-init="getSchool()">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{school.IMEI}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{school.image_url}}">
+      </div>
+      <div class="col-md-8">
+        <ul class="list-group">
+          <li class="list-group-item">IMEI: {{school.IMEI}}</li>
+          <li class="list-group-item">EMIS: {{school.EMIS}}</li>
+          <li class="list-group-item">RequestData: {{school.RequestData}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pull-right">
+  <a href="#/schools/edit/{{school._id}}">Edit</a> |  <a href="#" ng-click="removeSchool(school._id)">Delete</a>
+  </div>

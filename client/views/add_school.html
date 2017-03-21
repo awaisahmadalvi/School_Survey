@@ -1,0 +1,27 @@
+<a href="#/schools">Go Back</a>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add School</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+        <form ng-submit="addSchool()">
+          <div class="form-group">
+          <label>IMEI</label>
+          <input type="text" class="form-control" ng-model="school.IMEI" placeholder="Author">
+        </div>
+        <div class="form-group">
+          <label>EMIS</label>
+          <input type="text" class="form-control" ng-model="school.EMIS" placeholder="Publisher">
+        </div>
+        <div class="form-group">
+          <label>RequestData</label>
+          <input type="text" class="form-control" ng-model="school.RequestData" placeholder="Pages">
+        </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
