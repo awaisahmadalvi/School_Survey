@@ -1,0 +1,16 @@
+mongod -dbpath D:\mongodb_data --auth
+
+use admin
+db.createUser( { user: "dbadmin", pwd: "bilaldbadmin", roles: ["readWriteAnyDatabase", "dbAdminAnyDatabase"] } );
+
+db.createUser( { user: "useradmin", pwd: "bilaluseradmin", roles: ["userAdminAnyDatabase"] } );
+
+use schoolSurvey
+db.createUser( { user: "schooladmin", pwd: "bilalschooladmin", roles: ["readWrite"] } );
+db.createUser( { user: "schoolread", pwd: "bilalschooladmin", roles: ["read"] } );
+
+use admin
+db.shutdownServer()
+
+db.auth("dbadmin", "bilaldbadmin")
+db.auth("schooladmin", "bilalschooladmin")
