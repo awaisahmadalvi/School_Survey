@@ -49,6 +49,7 @@ module.exports.addSchool = (school, callback) => {
 			if (data){
 				School.create(school, callback);
 			} else {
+				school = { Error: "IMEI not found." }
 				callback (err, school);
 			}
 	});
@@ -56,13 +57,25 @@ module.exports.addSchool = (school, callback) => {
 
 // Update school
 module.exports.updateSchool = (id, school, options, callback) => {
-	var query = {_id: id};
-	var update = {
-		IMEI: school.IMEI,
-		EMIS: school.EMIS,
-		RequestData: school.RequestData
-	}
-	School.findOneAndUpdate(query, update, options, callback);
+	Imei.findOne({IMEI:school.IMEI},function(err, data){
+			if (err){
+				return handleError(err);
+			}
+			if (data){
+				var query = {_id: id};
+				var update = {
+					IMEI: school.IMEI,
+					EMIS: school.EMIS,
+					RequestData: school.RequestData
+				}
+				School.findOneAndUpdate(query, update, options, callback);
+			} else {
+				school = { Error: "IMEI not found." }
+				callback (err, school);
+			}
+	});
+
+
 }
 
 // Delete school

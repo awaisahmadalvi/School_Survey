@@ -88,7 +88,7 @@ app.post('/api/schools', (req, res) => {
 app.put('/api/schools/:_id', (req, res) => {
 	var id = req.params._id;
 	var school = req.body;
-	School.updateSchool(id, School, {}, (err, school) => {
+	School.updateSchool(id, school, {}, (err, school) => {
 		if(err){
 			throw err;
 		}

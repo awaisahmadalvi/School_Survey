@@ -1,3 +1,19 @@
+************* Start startup.bat on startup before login ************* 
+
+Open a run box
+type in "gpedit.msc" (without the quotes)
+Expand Computer Configuration
+Expand Windows Settings
+Select Scripts (Startup/Shutdown)
+Double click Startup
+Click Show Files and copy/paste shortcut of your batch file in to this folder
+Click the Add button on the startup properties
+Click Browse and double click on your script to choose it.
+"OK" out of all windows to apply the new settings.
+
+
+************* MongoDB Server Settings ************* 
+
 mongod -dbpath D:\mongodb_data --auth
 
 use admin
