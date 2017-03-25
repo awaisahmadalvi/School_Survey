@@ -14,7 +14,7 @@ Click Browse and double click on your script to choose it.
 
 ************* MongoDB Server Settings ************* 
 
-mongod -dbpath D:\mongodb_data --auth
+mongod -dbpath C:\schoolsurveyserver\DB_Data\db --auth
 
 use admin
 db.createUser( { user: "dbadmin", pwd: "bilaldbadmin", roles: ["readWriteAnyDatabase", "dbAdminAnyDatabase"] } );
@@ -30,3 +30,21 @@ db.shutdownServer()
 
 db.auth("dbadmin", "bilaldbadmin")
 db.auth("schooladmin", "bilalschooladmin")
+
+
+************* MongoDB Server Service ************* 
+
+(Please configure MongoDB server before creating service)
+
+Create a cfg file "C:\Program Files\MongoDB\Server\3.4\mongod.cfg"
+
+systemLog:
+    destination: file
+    path: C:\schoolsurveyserver\DB_Data\mongod.log
+storage:
+    dbPath: C:\schoolsurveyserver\DB_Data\db
+
+
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --config "C:\Program Files\MongoDB\Server\3.4\mongod.cfg" --install --auth
+
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --remove
