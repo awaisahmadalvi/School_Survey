@@ -9,15 +9,139 @@
         <form ng-submit="addSchool()">
           <div class="form-group">
             <label>IMEI</label>
-            <input type="text" class="form-control" ng-model="school.IMEI" placeholder="IMEI">
+            <input type="text" class="form-control" ng-model="school.imei" placeholder="IMEI">
           </div>
           <div class="form-group">
             <label>EMIS</label>
-            <input type="text" class="form-control" ng-model="school.EMIS" placeholder="EMIS">
+            <input type="text" class="form-control" ng-model="school.emis" placeholder="EMIS">
           </div>
           <div class="form-group">
-            <label>RequestData</label>
-            <input type="text" class="form-control" ng-model="school.RequestData" placeholder="RequestData">
+            <label>locationLong</label>
+            <input type="text" class="form-control" ng-model="school.locationLong" placeholder="locationLong">
+          </div>
+          <div class="form-group">
+            <label>locationLat</label>
+            <input type="text" class="form-control" ng-model="school.locationLat" placeholder="locationLat">
+          </div>
+          <div class="form-group">
+            <label>schoolNameandAddress</label>
+            <input type="text" class="form-control" ng-model="school.schoolNameandAddress" placeholder="schoolNameandAddress">
+          </div>
+          <div class="form-group">
+            <label>headTeacher</label>
+            <input type="text" class="form-control" ng-model="school.headTeacher" placeholder="headTeacher">
+          </div>
+          <div class="form-group">
+            <label>headTeacherContact</label>
+            <input type="text" class="form-control" ng-model="school.headTeacherContact" placeholder="headTeacherContact">
+          </div>
+          <div class="form-group">
+            <label>union</label>
+            <input type="text" class="form-control" ng-model="school.union" placeholder="union">
+          </div>
+          <div class="form-group">
+            <label>tehsil</label>
+            <input type="text" class="form-control" ng-model="school.tehsil" placeholder="tehsil">
+          </div>
+          <div class="form-group">
+            <label>district</label>
+            <input type="text" class="form-control" ng-model="school.district" placeholder="district">
+          </div>
+          <div class="form-group">
+            <label>noOfClassrooms</label>
+            <input type="text" class="form-control" ng-model="school.noOfClassrooms" placeholder="noOfClassrooms">
+          </div>
+          <div class="form-group">
+            <label>roofType</label>
+            <input type="text" class="form-control" ng-model="school.roofType" placeholder="roofType">
+          </div>
+          <div class="form-group">
+            <label>roofTypeOther</label>
+            <input type="text" class="form-control" ng-model="school.roofTypeOther" placeholder="roofTypeOther">
+          </div>
+          <div class="form-group">
+            <label>roofCondition</label>
+            <input type="text" class="form-control" ng-model="school.roofCondition" placeholder="roofCondition">
+          </div>
+          <div class="form-group">
+            <label>roofInclination</label>
+            <input type="text" class="form-control" ng-model="school.roofInclination" placeholder="roofInclination">
+          </div>
+          <div class="form-group">
+            <label>roofInclinationOther</label>
+            <input type="text" class="form-control" ng-model="school.roofInclinationOther" placeholder="roofInclinationOther">
+          </div>
+          <div class="form-group">
+            <label>roofShading</label>
+            <input type="text" class="form-control" ng-model="school.roofShading" placeholder="roofShading">
+          </div>
+          <div class="form-group">
+            <label>roofShadingOther</label>
+            <input type="text" class="form-control" ng-model="school.roofShadingOther" placeholder="roofShadingOther">
+          </div>
+          <div class="form-group">
+            <label>water</label>
+            <input type="text" class="form-control" ng-model="school.water" placeholder="water">
+          </div>
+          <div class="form-group">
+            <label>waterOther</label>
+            <input type="text" class="form-control" ng-model="school.waterOther" placeholder="waterOther">
+          </div>
+          <div class="form-group">
+            <label>roofArea</label>
+            <input type="text" class="form-control" ng-model="school.roofArea" placeholder="roofArea">
+          </div>
+          <div class="form-group">
+            <label>buildingAge</label>
+            <input type="text" class="form-control" ng-model="school.buildingAge" placeholder="buildingAge">
+          </div>
+          <div class="form-group">
+            <label>electr</label>
+            <input type="text" class="form-control" ng-model="school.electr" placeholder="electr">
+          </div>
+          <div class="form-group">
+            <label>electrConnection</label>
+            <input type="text" class="form-control" ng-model="school.electrConnection" placeholder="electrConnection">
+          </div>
+          <div class="form-group">
+            <label>electrConnectionsOther</label>
+            <input type="text" class="form-control" ng-model="school.electrConnectionsOther" placeholder="electrConnectionsOther">
+          </div>
+          <div class="form-group">
+            <label>electrConnectionThreePhase</label>
+            <input type="text" class="form-control" ng-model="school.electrConnectionThreePhase" placeholder="electrConnectionThreePhase">
+          </div>
+          <div class="form-group">
+            <label>transformerCapacity</label>
+            <input type="text" class="form-control" ng-model="school.transformerCapacity" placeholder="transformerCapacity">
+          </div>
+          <div class="form-group">
+            <label>wiringCondition</label>
+            <input type="text" class="form-control" ng-model="school.wiringCondition" placeholder="wiringCondition">
+          </div>
+          <div class="form-group">
+            <label>loadShading</label>
+            <input type="text" class="form-control" ng-model="school.loadShading" placeholder="loadShading">
+          </div>
+          <div class="form-group">
+            <label>fans</label>
+            <input type="text" class="form-control" ng-model="school.fans" placeholder="fans">
+          </div>
+          <div class="form-group">
+            <label>lights</label>
+            <input type="text" class="form-control" ng-model="school.lights" placeholder="lights">
+          </div>
+          <div class="form-group">
+            <label>landline</label>
+            <input type="text" class="form-control" ng-model="school.landline" placeholder="landline">
+          </div>
+          <div class="form-group">
+            <label>cellPhoneCoverage</label>
+            <input type="text" class="form-control" ng-model="school.cellPhoneCoverage" placeholder="cellPhoneCoverage">
+          </div>
+          <div class="form-group">
+            <label>otherEquipment</label>
+            <input type="text" class="form-control" ng-model="school.otherEquipment" placeholder="otherEquipment">
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
         </form>

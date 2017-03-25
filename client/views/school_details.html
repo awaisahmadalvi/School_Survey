@@ -10,9 +10,41 @@
       </div>
       <div class="col-md-8">
         <ul class="list-group">
-          <li class="list-group-item">IMEI: {{school.IMEI}}</li>
-          <li class="list-group-item">EMIS: {{school.EMIS}}</li>
-          <li class="list-group-item">RequestData: {{school.RequestData}}</li>
+          <li class="list-group-item"><b>Create_date: </b> {{school.create_date}}</li>
+          <li class="list-group-item"><b>IMEI: </b>{{school.imei}}</li>
+          <li class="list-group-item"><b>EMIS: </b>{{school.emis}}</li>
+          <li class="list-group-item"><b>Lat, Long: </b>{{school.locationLat}}, {{school.locationLong}}</li>
+          <li class="list-group-item"><b>Timestamp: </b>{{school.timestamp}}</li>
+          <li class="list-group-item"><b>School Name and Address: </b>{{school.schoolNameandAddress}}</li>
+          <li class="list-group-item"><b>Head Teacher: </b>{{school.headTeacher}}</li>
+          <li class="list-group-item"><b>Head Teacher Contact: </b>{{school.headTeacherContact}}</li>
+          <li class="list-group-item"><b>Union: </b>{{school.union}}</li>
+          <li class="list-group-item"><b>Tehsil: </b>{{school.tehsil}}</li>
+          <li class="list-group-item"><b>District: </b>{{school.district}}</li>
+          <li class="list-group-item"><b>No. Of Classrooms: </b>{{school.noOfClassrooms}}</li>
+          <li class="list-group-item"><b>Roof Type: </b>{{school.roofType}}</li>
+          <li class="list-group-item"><b>Roof Type Other: </b>{{school.roofTypeOther}}</li>
+          <li class="list-group-item"><b>Roof Condition: </b>{{school.roofCondition}}</li>
+          <li class="list-group-item"><b>Roof Inclination: </b>{{school.roofInclination}}</li>
+          <li class="list-group-item"><b>Roof Inclination Other: </b>{{school.roofInclinationOther}}</li>
+          <li class="list-group-item"><b>Roof Shading: </b>{{school.roofShading}}</li>
+          <li class="list-group-item"><b>Roof Shading Other: </b>{{school.roofShadingOther}}</li>
+          <li class="list-group-item"><b>Water: </b>{{school.water}}</li>
+          <li class="list-group-item"><b>Water Other: </b>{{school.waterOther}}</li>
+          <li class="list-group-item"><b>Roof Area: </b>{{school.roofArea}}</li>
+          <li class="list-group-item"><b>Building Age: </b>{{school.buildingAge}}</li>
+          <li class="list-group-item"><b>Electr: </b>{{school.electr}}</li>
+          <li class="list-group-item"><b>Electr Connection: </b>{{school.electrConnection}}</li>
+          <li class="list-group-item"><b>Electr Connections Other: </b>{{school.electrConnectionsOther}}</li>
+          <li class="list-group-item"><b>Electr Connection Three Phase: </b>{{school.electrConnectionThreePhase}}</li>
+          <li class="list-group-item"><b>Transformer Capacity: </b>{{school.transformerCapacity}}</li>
+          <li class="list-group-item"><b>Wiring Condition: </b>{{school.wiringCondition}}</li>
+          <li class="list-group-item"><b>Load Shading: </b>{{school.loadShading}}</li>
+          <li class="list-group-item"><b>Fans: </b>{{school.fans}}</li>
+          <li class="list-group-item"><b>Lights: </b>{{school.lights}}</li>
+          <li class="list-group-item"><b>Landline: </b>{{school.landline}}</li>
+          <li class="list-group-item"><b>Cell Phone Coverage: </b>{{school.cellPhoneCoverage}}</li>
+          <li class="list-group-item"><b>Other Equipment: </b>{{school.otherEquipment}}</li>
         </ul>
       </div>
     </div>
@@ -20,5 +52,6 @@
 </div>
 
 <div class="pull-right">
-  <a href="#/schools/edit/{{school._id}}">Edit</a> |  <a href="#" ng-click="removeSchool(school._id)">Delete</a>
-  </div>
+  <!-- <a href="#/schools/edit/{{school._id}}">Edit</a> |  <a href="#" ng-click="removeSchool(school._id)">Delete</a>  -->
+  <a href="#" ng-click="removeSchool(school._id)">Delete</a>
+</div>

@@ -13,6 +13,7 @@ myApp.config(function($routeProvider){
 		controller:'SchoolsController',
 		templateUrl: 'views/school_details.html'
 	})
+	/*
 	.when('/schools/add',{
 		controller:'SchoolsController',
 		templateUrl: 'views/add_school.html'
@@ -20,7 +21,7 @@ myApp.config(function($routeProvider){
 	.when('/schools/edit/:id',{
 		controller:'SchoolsController',
 		templateUrl: 'views/edit_school.html'
-	})
+	})*/
 	.otherwise({
 		redirectTo: '/'
 	});
