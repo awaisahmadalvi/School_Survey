@@ -79,7 +79,17 @@ app.post('/api/schools', (req, res) => {
 	var school = req.body;
 	School.addSchool(school, (err, school) => {
 		if(err){
-			throw err;
+		  switch (err.name) {
+		    case 'ValidationError':
+		      for (field in err.errors) {
+						res.status(412);
+		        res.json({"ERROR":err.errors[field].message});
+						break;
+		      }
+		      break;
+		    default:
+					throw err;
+			}
 		}
 		res.json(school);
 	});
