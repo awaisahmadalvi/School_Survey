@@ -2,19 +2,19 @@ const mongoose = require('mongoose');
 
 // image Schema
 const imageSchema = mongoose.Schema({
-	IMEI:{
+	imei:{
 		type: String,
 		required: true
 	},
-	EMIS:{
+	emis:{
 		type: String,
 		required: true
 	},
-	ImageData:{
+	data:{
 		type: String,
 		required: true
 	},
-	ImageType:{
+	imgtype:{
 		type: String,
 		required: true
 	},
@@ -40,10 +40,10 @@ module.exports.addImage = (image, callback) => {
 module.exports.updateImage = (id, image, options, callback) => {
 	var query = {_id: id};
 	var update = {
-		IMEI: image.IMEI,
-		EMIS: image.EMIS,
-		ImageData: image.ImageData,
-		ImageType: image.ImageType
+		imei: image.imei,
+		emis: image.emis,
+		data: image.data,
+		imgtype: image.imgtype
 	}
 	Image.findOneAndUpdate(query, update, options, callback);
 }
