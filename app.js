@@ -26,10 +26,20 @@ app.get('/api/images', (req, res) => {
 	});
 });
 
+app.get('/api/images/:_id', (req, res) => {
+	Image.getImagesById(req.params._id, (err, image) => {
+		if(err){
+			throw err;
+		}
+		res.json(image);
+	});
+});
+
 app.post('/api/images', (req, res) => {
 	var image = req.body;
 	Image.addImage(Image, (err, image) => {
 		if(err){
+			//console.error(""+);
 			throw err;
 		}
 		res.json(image);

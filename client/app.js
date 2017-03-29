@@ -13,6 +13,10 @@ myApp.config(function($routeProvider){
 		controller:'SchoolsController',
 		templateUrl: 'views/school_details.html'
 	})
+	.when('/images/:id',{
+		controller:'ImagesController',
+		templateUrl:'views/images_details.html'
+	})
 	/*
 	.when('/schools/add',{
 		controller:'SchoolsController',

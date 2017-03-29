@@ -11,6 +11,7 @@ myApp.controller('SchoolsController', ['$scope', '$http', '$location', '$routePa
 
 	$scope.getSchool = function(){
 		var id = $routeParams.id;
+		console.log(id);
 		$http.get('/api/schools/'+id).success(function(response){
 			$scope.school = response;
 		});
@@ -34,4 +35,18 @@ myApp.controller('SchoolsController', ['$scope', '$http', '$location', '$routePa
 			window.location.href='#/schools';
 		});
 	}
+}]).controller('ImagesController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
+	console.log('ImagesController loaded...');
+
+
+
+	$scope.getImages = function(){
+		var id = $routeParams.id;
+		console.log(id);
+		$http.get('/api/images/'+id).success(function(response){
+			$scope.images = response;
+		});
+	}
+
+
 }]);

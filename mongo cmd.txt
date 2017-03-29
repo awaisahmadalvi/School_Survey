@@ -1,4 +1,4 @@
-************* Start startup.bat on startup before login ************* 
+************* Start startup.bat on startup before login *************
 
 Open a run box
 type in "gpedit.msc" (without the quotes)
@@ -12,9 +12,12 @@ Click Browse and double click on your script to choose it.
 "OK" out of all windows to apply the new settings.
 
 
-************* MongoDB Server Settings ************* 
+************* MongoDB Server Settings *************
 
 mongod -dbpath C:\schoolsurveyserver\DB_Data\db --auth
+
+
+mongod -dbpath D:\mongodb_data\db --auth
 
 use admin
 db.createUser( { user: "dbadmin", pwd: "bilaldbadmin", roles: ["readWriteAnyDatabase", "dbAdminAnyDatabase"] } );
@@ -32,7 +35,7 @@ db.auth("dbadmin", "bilaldbadmin")
 db.auth("schooladmin", "bilalschooladmin")
 
 
-************* MongoDB Server Service ************* 
+************* MongoDB Server Service *************
 
 (Please configure MongoDB server before creating service)
 

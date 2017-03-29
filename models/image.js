@@ -48,6 +48,10 @@ module.exports.updateImage = (id, image, options, callback) => {
 	Image.findOneAndUpdate(query, update, options, callback);
 }
 
+// Get school
+module.exports.getImagesById = (id, callback) => {
+	Image.find({'emis':id}, callback);
+}
 
 // Delete image
 module.exports.removeImage = (id, callback) => {

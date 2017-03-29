@@ -177,7 +177,6 @@ const schoolSchema = mongoose.Schema({
 
 const School = module.exports = mongoose.model('schools', schoolSchema);
 
-
 // Get schools
 module.exports.getSchools = (callback, limit) => {
 	School.find(callback).limit(limit);
@@ -185,7 +184,11 @@ module.exports.getSchools = (callback, limit) => {
 
 // Get school
 module.exports.getSchoolById = (id, callback) => {
-	School.findById(id, callback);
+	School.findOne({'emis':id}, callback);
+}
+// Get school
+module.exports.getImagesById = (id, callback) => {
+	Image.find({'emis':id}, callback);
 }
 
 // Add school
