@@ -186,10 +186,6 @@ module.exports.getSchools = (callback, limit) => {
 module.exports.getSchoolById = (id, callback) => {
 	School.findOne({'emis':id}, callback);
 }
-// Get school
-module.exports.getImagesById = (id, callback) => {
-	Image.find({'emis':id}, callback);
-}
 
 // Add school
 module.exports.addSchool = (school, callback) => {
