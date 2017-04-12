@@ -37,7 +37,7 @@ app.get('/api/images/:_id', (req, res) => {
 
 app.post('/api/images', (req, res) => {
 	var image = req.body;
-	Image.addImage(Image, (err, image) => {
+	Image.addImage(image, (err, image) => {
 		if(err){
 			//console.error(""+);
 			throw err;
@@ -92,8 +92,9 @@ app.post('/api/schools', (req, res) => {
 		  switch (err.name) {
 		    case 'ValidationError':
 		      for (field in err.errors) {
-						res.status(412);
-		        res.json({"ERROR":err.errors[field].message});
+			   res.status(412);
+			   res.json({"ERROR":err.errors[field].message});
+		        console.log("ERROR:%s",err.errors[field].message);
 						break;
 		      }
 		      break;

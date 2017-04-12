@@ -166,7 +166,7 @@ const schoolSchema = mongoose.Schema({
 		validate: [/^([0-1])$/,"Telephone Land Line Connection/DSL is not Correct"],
 		required:true
 	},
-	cellPhoneCoverage:{
+	cellphoneCoverage:{
 		type:String,
 		required:true
 	},
