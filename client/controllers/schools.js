@@ -6,14 +6,18 @@ myApp.controller('SchoolsController', ['$scope', '$http', '$location', '$routePa
 	$scope.getSchools = function(){
 		$http.get('/api/schools').success(function(response){
 			$scope.schools = response;
+		}).error(function(response){
+			console.log(response);
 		});
 	}
 
 	$scope.getSchool = function(){
 		var id = $routeParams.id;
-		console.log(id);
 		$http.get('/api/schools/'+id).success(function(response){
 			$scope.school = response;
+			console.log(response);
+		}).error(function(response){
+			console.log(response);
 		});
 	}
 

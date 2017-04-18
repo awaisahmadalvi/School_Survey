@@ -1,14 +1,11 @@
 <a href="#/schools">Go Back</a>
-<div class="panel panel-default" ng-init="getImages()" >
+<div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Images</h3>
+    <h3 class="panel-title">EMIS: {{school.emis}}</h3>
   </div>
   <div class="panel-body">
     <div class="row">
-      <div class="col-md-4">
-        <img src="{{school.image_url}}">
-      </div>
-      <div class="col-md-8">
+      <div class="col-md-12" ng-init="getSchool()">
         <ul class="list-group">
           <li class="list-group-item"><b>Create_date: </b> {{school.create_date}}</li>
           <li class="list-group-item"><b>IMEI: </b>{{school.imei}}</li>
@@ -48,10 +45,7 @@
         </ul>
       </div>
     </div>
+      <a class="pull-right btn btn-primary" href="#/images/{{school.emis}}">Show Images</a>
+      <a class="pull-right btn btn-primary" ng-click="removeSchool(school._id)">Delete School</a>
   </div>
-</div>
-
-<div class="pull-right">
-  <!-- <a href="#/schools/edit/{{school._id}}">Edit</a> |  <a href="#" ng-click="removeSchool(school._id)">Delete</a>  -->
-  <a href="#" ng-click="removeSchool(school._id)">Delete</a>
 </div>

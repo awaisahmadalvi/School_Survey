@@ -17,7 +17,7 @@ Click Browse and double click on your script to choose it.
 mongod -dbpath C:\schoolsurveyserver\DB_Data\db --auth
 
 
-mongod -dbpath D:\mongodb_data\db --auth
+mongod -dbpath D:\mongodb_data --auth
 
 use admin
 db.createUser( { user: "dbadmin", pwd: "bilaldbadmin", roles: ["readWriteAnyDatabase", "dbAdminAnyDatabase"] } );
