@@ -17,11 +17,11 @@ myApp.config(function($routeProvider){
 		controller:'ImagesController',
 		templateUrl:'views/images_details.html'
 	})
-	/*
-	.when('/schools/add',{
-		controller:'SchoolsController',
-		templateUrl: 'views/add_school.html'
+	.when('/add_imei',{
+		controller:'ImagesController',
+		templateUrl: 'views/add_imei.html'
 	})
+	/*
 	.when('/schools/edit/:id',{
 		controller:'SchoolsController',
 		templateUrl: 'views/edit_school.html'
