@@ -1,7 +1,7 @@
 {
-  "name": "bookstore",
+  "name": "School Survey",
   "version": "1.0.0",
-  "description": "Simple bookstore app",
+  "description": "A Survey for Solarization of Govenment Schools of Punjab.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,9 @@
     "body-parser": "*",
     "mongoose": "*"
   },
-  "author": "Brad Traversy",
+  "devDependencies": {
+    "electron": "*"
+  },
+  "author": "Awais Ahamd Alvi",
   "license": "ISC"
 }

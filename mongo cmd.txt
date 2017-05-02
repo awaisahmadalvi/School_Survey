@@ -12,6 +12,14 @@ Click Browse and double click on your script to choose it.
 "OK" out of all windows to apply the new settings.
 
 
+************* PM2 Commands *************
+
+pm2 start app.js -i max
+pm2 link w58d0okbd6y21aw moa23me10dwoi7a
+pm2 interact delete
+pm2 stop all
+pm2 list
+
 ************* MongoDB Server Settings *************
 
 mongod -dbpath C:\schoolsurveyserver\DB_Data\db --auth
