@@ -25,17 +25,14 @@ const schoolSchema = mongoose.Schema({
 	},
 	locationLong:{
 		type:String,
-		//validate: [//,""],
 		required:true
 	},
 	locationLat:{
 		type:String,
-		//validate: [//,""],
 		required:true
 	},
 	timestamp:{
 		type:String,
-		//validate: [//,""],
 		required:true
 	},
 	schoolNameandAddress:{
@@ -68,6 +65,11 @@ const schoolSchema = mongoose.Schema({
 		validate: [/^([\x20A-Za-z0-9]){1,30}$/,"District should contain (A-Z a-z 0-9) and it should be (1-30) characters long"],
 		required:true
 	},
+	rooms:{
+		type:String,
+		required:true
+	},
+	/*
 	noOfClassrooms:{
 		type:Number,
 		validate: [/^([0-9]*)$/,"No of Class Rooms should contain (0-9) and it should be 0 or more than 0"],
@@ -104,7 +106,7 @@ const schoolSchema = mongoose.Schema({
 	roofShadingOther:{
 		validate: [/^([\x20A-Za-z0-9]){1,30}$/,"Roof Shading Other should contain (A-Z a-z 0-9) and it should be (1-30) characters long"],
 		type:String
-	},
+	},*/
 	water:{
 		type:Number,
 		validate: [/^([0-3])$/,"water Availability is not Correct"],
@@ -113,7 +115,7 @@ const schoolSchema = mongoose.Schema({
 	waterOther:{
 		validate: [/^([\x20A-Za-z0-9]){1,30}$/,"Water Availability Other should contain (A-Z a-z 0-9) and it should be (1-30) characters long"],
 		type:String
-	},
+	},/*
 	roofArea:{
 		type:String,
 		validate: [/^([0-9]*)$/,"Roof Area should contain (0-9) and it should be more than 0"],
@@ -123,12 +125,22 @@ const schoolSchema = mongoose.Schema({
 		type:String,
 		validate: [/^([0-9]*)$/,"Building Age should contain (0-9) and it should be more than 0"],
 		required:true
+	},*/
+	students:{
+		type:Number,
+		validate: [/^([\x20A-Za-z0-9]){1,30}$/,"District should contain (A-Z a-z 0-9) and it should be (1-30) characters long"],
+		required:true
+	},
+	grid:{
+		type:Number,
+		validate: [/^([\x20A-Za-z0-9]){1,30}$/,"District should contain (A-Z a-z 0-9) and it should be (1-30) characters long"],
+		required:true
 	},
 	electr:{
 		type:Number,
 		validate: [/^([0-1])$/,"Electricity Availability is not Correct"],
 		required:true
-	},
+	},/*
 	electrConnection:{
 		validate: [/^([0-2])$/,"Electricity Connection is not Correct"],
 		type:Number
@@ -144,7 +156,7 @@ const schoolSchema = mongoose.Schema({
 	transformerCapacity:{
 		validate: [/^([0-9]*)$/,"Transformer Capacity should contain (0-9) and it should be Greater than 0"],
 		type:String
-	},
+	},*/
 	wiringCondition:{
 		validate: [/^([0-1])$/,"Wiring Condition is not Correct"],
 		type:Number
@@ -152,6 +164,11 @@ const schoolSchema = mongoose.Schema({
 	loadShading:{
 		validate: [/^([0-9]*)$/,"Load Shading should contain (0-9) and it should be 0 or less than 24"],
 		type:String
+	},/*
+	landline:{
+		type:Number,
+		validate: [/^([0-1])$/,"Telephone Land Line Connection/DSL is not Correct"],
+		required:true
 	},
 	fans:{
 		validate: [/^([0-9]*)$/,"Fans should contain (0-9) and it should be 0 or greater"],
@@ -160,14 +177,33 @@ const schoolSchema = mongoose.Schema({
 	lights:{
 		validate: [/^([0-9]*)$/,"Lights should contain (0-9) and it should be 0 or greater"],
 		type:String
-	},
-	landline:{
-		type:Number,
-		validate: [/^([0-1])$/,"Telephone Land Line Connection/DSL is not Correct"],
-		required:true
-	},
+	},*/
 	cellphoneCoverage:{
 		type:String,
+		required:true
+	},
+	fans_ceil:{
+		type:Number,
+		required:true
+	},
+	fans_bracket:{
+		type:Number,
+		required:true
+	},
+	fans_ped:{
+		type:Number,
+		required:true
+	},
+	fans_need:{
+		type:Number,
+		required:true
+	},
+	lights_ext:{
+		type:Number,
+		required:true
+	},
+	lights_need:{
+		type:Number,
 		required:true
 	},
 	otherEquipment:{
